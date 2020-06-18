@@ -3,16 +3,31 @@ Input: an integer
 Returns: an integer
 '''
 #https://kite.com/python/docs/itertools.combinations
-from itertools import combinations
+#import itertool
+
 def eating_cookies(n):
     # Your code here
     if n< 0:
         return 0
     elif n==0:
         return 1
-    else: 
-        return eating_cookies(n-3)+ eating_cookies(n-2)+eating_cookies(n-1)
 
+    #check if the answer is in our cache
+    elif cache[n] > 0:
+        return catche[n]
+    else: 
+        cache[n]= eating_cookies(n-3)+ eating_cookies(n-2)+eating_cookies(n-1)
+
+    return cache[n]
+
+# def eating_cookies(n):
+#     # Your code here
+#     if n< 0:
+#         return 0
+#     elif n==0:
+#         return 1
+#     else: 
+#         return eating_cookies(n-3)+ eating_cookies(n-2)+eating_cookies(n-1)
 
 
     # for k in range(len(arr)):
