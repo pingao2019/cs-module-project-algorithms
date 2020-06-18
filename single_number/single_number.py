@@ -4,8 +4,21 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    #   every   element in arr is arranged from low value  to high value, try to find the same value from other in the arr.
+    #choose element i.
+    # if the element is not equal to another, continue to compare all another
+    arr.sort()
+    
+    while i <(len(arr)):
+        if arr[i]!=arr[i+1]:
+                return arr.pop(j)
+            #  other wise return that number
+            return arr[i]
+        i +=2
 
-    pass
+    return None
+     
+    
 
 
 if __name__ == '__main__':

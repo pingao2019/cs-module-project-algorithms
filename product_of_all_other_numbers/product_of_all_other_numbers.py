@@ -2,12 +2,18 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+
+import numpy as np
 def product_of_all_other_numbers(arr):
     # Your code here
+    #  result:[arr[i]*arr[2]*arr[3]*....arr[len(arr)-1/arr[i]],  arr[1]*arr[i]*arr[3]*...arr[len(arr)-1/arr[i]], '''']
+    new_arr=[]
+    for i in range(len(arr)-1):
+        
+        arr[i]=np. prod(arr)/arr[i]
+        return new_arr.append(arr[i])
 
-    pass
-
-
+    return new_arr
 if __name__ == '__main__':
     # Use the main function to test your implementation
     # arr = [1, 2, 3, 4, 5]
