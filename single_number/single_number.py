@@ -9,17 +9,23 @@ def single_number(arr):
     # if the element is not equal to another, continue to compare all another
     arr.sort()
     
-    while i <(len(arr)):
-        if arr[i]!=arr[i+1]:
-                return arr.pop(j)
-            #  other wise return that number
-            return arr[i]
-        i +=2
+    # while i <(len(arr)):
+    #     if arr[i]!=arr[i+1]:
+    #             return arr.pop(i)
+    #         #  other wise return that number
+    #         return arr[i]
+    #     i +=2
 
-    return None
+    # return None
      
-    
+    s=set()
+    for x in arr:
+        if x in s:
+            s.remove(x)
+        else:
+            s.add(x)
 
+    return list(s)[0]
 
 if __name__ == '__main__':
     # Use the main function to test your implementation

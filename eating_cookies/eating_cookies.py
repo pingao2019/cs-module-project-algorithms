@@ -6,25 +6,37 @@ Returns: an integer
 from itertools import combinations
 def eating_cookies(n):
     # Your code here
-    for k in range(len(arr)):
-        # combinations(range(4), 3) --> 012 013 023 123
-    #   pool = tuple(n)
-    #   m = len(pool)
-    #   if r > m:
-    #         return
-    #         indices = range(r)
-    #         yield tuple(pool[i] for i in indices)
+    if n< 0:
+        return 0
+    elif n==0:
+        return 1
+    else: 
+        return eating_cookies(n-3)+ eating_cookies(n-2)+eating_cookies(n-1)
 
-    # all_combinations = []
 
-        for i in range(len(n) + 1):
-            #Add all combinations of `a_list` to `all_combinations`
 
-            combinations_object = itertools.combinations(n, i)
+    # for k in range(len(arr)):
+    #     # combinations(range(4), 3) --> 012 013 023 123
+    # #   pool = tuple(n)
+    # #   m = len(pool)
+    # #   if r > m:
+    # #         return
+    # #         indices = range(r)
+    # #         yield tuple(pool[i] for i in indices)
 
-            combinations_list = list(combinations_object)
+    # # all_combinations = []
 
-            all_combinations += combinations_list
+    #     for i in range(len(n) + 1):
+    #         #Add all combinations of `a_list` to `all_combinations`
+
+    #         combinations_object = itertools.combinations(n, i)
+
+    #         combinations_list = list(combinations_object)
+
+    #         all_combinations += combinations_list
+
+
+
 
 if __name__ == "__main__":
     # Use the main function here to test out your implementation
